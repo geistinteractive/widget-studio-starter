@@ -1,0 +1,11 @@
+{
+    "$schema" : "https://carafe.fm/schema/draft-01/data.schema.json#",
+    "jsonArrayVar": [
+        "This",
+        "That"
+    ],
+    "jsonObjectVar": {
+        "name": "value"
+    },
+    "textVar": "Foo"
+}

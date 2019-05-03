@@ -1,0 +1,43 @@
+{
+  "name": "widget-studio-starter",
+  "version": "0.1.0",
+  "description": "a starter for widget studio",
+  "main": "webpack.config.js",
+  "scripts": {
+    "webpack": "webpack --watch",
+    "validate": "validate-carafe-bundle -b ",
+    "import": "extract-carafe-bundle -b ",
+    "watch": "render-carafe-source",
+    "watch-port": "render-carafe-source -p ",
+    "build": "compile-carafe-bundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geistinteractive/widget-studio-starter.git"
+  },
+  "author": "todd@geistinteractive.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geistinteractive/widget-studio-starter/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@carafe-fm/bundler": "^1.0.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "on-build-webpack": "^0.1.0",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  },
+  "homepage": "https://github.com/geistinteractive/widget-studio-starter#readme",
+  "carafe": {
+    "templateFilename": "dist/index.html",
+    "configFilename": "widget-studio/config.json",
+    "dataFilename": "widget-studio/data.json",
+    "metaFilename": "widget-studio/meta.json",
+    "previewFilename": "widget-studio/preview.png"
+  }
+}
