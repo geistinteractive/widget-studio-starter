@@ -5,6 +5,7 @@ const HtmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin
 const fs = require("fs");
 const open = require("open");
 const WebpackOnBuildPlugin = require("on-build-webpack");
+const WatchExternalFilesPlugin = require("webpack-watch-files-plugin").default;
 
 module.exports = {
   mode: "production",
@@ -41,10 +42,12 @@ module.exports = {
       template: "src/index.html",
       inlineSource: ".(js|css)$"
     }),
-
+    new WatchExternalFilesPlugin({
+      files: ["./widget-studio/*.json", "!./src/*.test.js"]
+    }),
     new HtmlWebpackInlineSourcePlugin(),
     new WebpackOnBuildPlugin(function(stats) {
-      // open("fmp://$/WSviewer.fmp12?script=render");
+      open("fmp://$/WSviewer.fmp12?script=render");
     })
   ],
   optimization: {

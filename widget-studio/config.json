@@ -16,7 +16,7 @@
         "label": "Color",
         "sort": "1",
         "type": "color",
-        "value": "rgba(121,121,121,1)"
+        "value": "rgba(200,121,121,.1)"
     },
     "cssSnippetVar": {
         "category": "Snippets",
